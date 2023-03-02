@@ -6,11 +6,13 @@
  */
 export const pick = (obj, ...fields) => {
   //
-  const newObj = Object.assign({}, obj)
+  const newObj = {}
 
-  Object.keys(newObj)
-    .filter((field) => !fields.includes(field))
-    .forEach((field) => delete newObj[field])
+  for (const [key, value] of Object.entries(obj)) {
+    if (fields.includes(key)) {
+      newObj[key] = value
+    }
+  }
 
   return newObj
 }
