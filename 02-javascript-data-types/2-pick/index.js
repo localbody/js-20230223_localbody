@@ -13,6 +13,5 @@ export const pick = (obj, ...fields) => {
       newObj[key] = value
     }
   }
-
   return newObj
 }

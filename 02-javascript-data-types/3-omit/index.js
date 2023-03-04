@@ -12,6 +12,5 @@ export const omit = (obj, ...fields) => {
       newObj[key] = value
     }
   }
-
   return newObj
 }
